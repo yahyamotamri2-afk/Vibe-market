@@ -2,7 +2,7 @@ const cartModal = document.getElementById("cartModal");
 const checkoutModal = document.getElementById("checkoutModal");
 const cartItemsList = document.getElementById("cartItems");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-const langBtn = document.querySelector(".cart-btn");
+const langBtn = document.querySelector(".lang-btn");
 
 let products = {
   led:{id:"led",name:"LED RGB متعدد الألوان",price:25,img:"images/ledd.jpg",stock:10},
@@ -325,10 +325,25 @@ if (productsContainer) {
     productsContainer.appendChild(card);
   });
 }
-const newProduct = {
-  id: name.toLowerCase().replace(/\s+/g, "-"),
-  name,
-  price,
-  img: "images/" + imgName,
-  stock
-};
+const music = document.getElementById("bgMusic");
+const toggleBtn = document.getElementById("musicToggle");
+
+// إعدادات أولية
+music.volume = 0.3;
+
+// autoplay mute (browser يسمح)
+music.play().catch(() => {});
+
+// زر play / pause
+toggleBtn.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  if (music.paused) {
+    music.muted = false;
+    music.play();
+    toggleBtn.textContent = "⏸";
+  } else {
+    music.pause();
+    toggleBtn.textContent = "▶";
+  }
+});

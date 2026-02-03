@@ -630,4 +630,28 @@ html {
     height: 200px;
   }
 }
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  left: 20px; /* بدل right → left */
+  z-index: 9999;
+}
+
+.music-player button {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #00ffd5, #007bff);
+  color: #000;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0,255,213,0.6);
+  transition: transform 0.2s ease;
+}
+
+.music-player button:hover {
+  transform: scale(1.1);
+}
+
 
