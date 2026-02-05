@@ -8,7 +8,9 @@ let products = {
   led:{id:"led",name:"LED RGB متعدد الألوان",price:25,img:"images/ledd.jpg",stock:10},
   casque:{id:"casque",name:"Casque Bluetooth CAT EAR",price:25,img:"images/casque.jpg",stock:5},
   mouse:{id:"mouse",name:"Elite RGB Wireless Mouse",price:30,img:"images/mouse.jpg",stock:7},
-  projector:{id:"projector",name:"LED star projector with Bluetooth",price:25,img:"images/star.jpg",stock:7}
+  projector:{id:"projector",name:"LED star projector with Bluetooth",price:25,img:"images/star.jpg",stock:7},
+  mong:{id:"mong",name:"T800 Ultra Smart Watch — 49mm Aluminium",price:30,img:"images/mong.jpg",stock:7},
+  mic:{id:"mic",name:"Professional Studio Kit — Smartphone & Camera",price:35.900,img:"images/mic.jpg",stock:7}
 };
 
 
